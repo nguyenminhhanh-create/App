@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Life Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- ── HEADER ─────────────────────────────────── -->
+    <header class="app-header">
+      <div class="header-left">
+        <h1>Life Manager</h1>
+        <p class="app-date" id="app-date"></p>
+      </div>
+      <div id="header-tokens" class="header-tokens"></div>
+    </header>
+
+    <!-- ── TWO-COLUMN BODY ─────────────────────────── -->
+    <div class="app-body">
+
+      <!-- LEFT: tabs + page content -->
+      <div class="app-main">
+
+        <!-- Tab bar (script.js populates active class) -->
+        <nav class="tab-nav" id="tab-nav">
+          <button class="tab-btn active" data-tab="todo">✓ To-Do</button>
+          <button class="tab-btn"        data-tab="habits">◎ Habits</button>
+          <button class="tab-btn"        data-tab="stats">⟳ Stats</button>
+        </nav>
+
+        <!-- Dynamic page content is injected here by script.js -->
+        <main class="app-content" id="app-content"></main>
+
+      </div>
+
+      <!-- RIGHT: always-visible calendar sidebar -->
+      <aside class="app-sidebar">
+        <div class="calendar-panel" id="calendar"></div>
+      </aside>
+
+    </div><!-- end app-body -->
+
+  </div><!-- end app -->
+
+  <script src="script.js"></script>
+</body>
+</html>
